@@ -37,7 +37,7 @@
         <h1>Hi, I am <br><strong>Darby M. Pusod</strong></h1>
         </h1>
         <br>
-        <p class="section__subtitle section__subtitle--intro">Licensed Professional Civil Engineer</p>
+        <p class="section__subtitle section__subtitle--intro">Full-Stack Web Developer</p>
         <img src="img/mypicture.jpg" alt="Picture of Darby" class="intro__img">
 
     </section>
@@ -123,8 +123,8 @@
         <!---My Email---->
         <a href="pusoddarby@gmail.com" class="footer__link">pusoddarby@gmail.com</a>
         <ul class="social-list">
-            <li class="social-list__item"><a href="#" class="social-list__link"><i class="bi bi-github"></i></a></li>
-            <li class="social-list__item"><a href="#" class="social-list__link"><i class="bi bi-messenger"></i></a></li>
+            <li class="social-list__item"><a href="https://github.com/darvz1982" class="social-list__link"><i class="bi bi-github"></i></a></li>
+            <li class="social-list__item fb-customerchat" id="fb-customer-chat"><a href="#" class="social-list__link" ><i class="bi bi-messenger"></i></a></li>
             <li class="social-list__item"><a href="#" class="social-list__link"><i class="bi bi-whatsapp"></i></i></a></li>
             <li class="social-list__item"><a href="#" class="social-list__link"><i class="bi bi-twitter"></i></a></li>
             
@@ -132,6 +132,37 @@
     </footer>
 
     <script src="js/index.js"></script>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "109088685504435");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v16.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     
 </body>
 </html>
